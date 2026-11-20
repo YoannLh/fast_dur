@@ -214,7 +214,10 @@ body {
 /* Correctif mobile : carte centrée, marges conservées,
    hauteur utile occupée sans agrandir le bandeau jaune. */
 @media (max-width: 600px) {
-  html, body { height: 100%; }
+  html,
+  body {
+    height: 100%;
+  }
   body {
     height: 100dvh;
     min-height: 0;
@@ -232,7 +235,9 @@ body {
     flex: 0 1 430px;
     min-height: 0;
   }
-  .profile { flex: 0 0 auto; }
+  .profile {
+    flex: 0 0 auto;
+  }
   .contact-links {
     flex: 1 1 auto;
     min-height: 0;
@@ -240,30 +245,107 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .contact-link, .cta { flex-shrink: 0; }
+  .contact-link,
+  .cta {
+    flex-shrink: 0;
+  }
 }
 @media (max-width: 600px) and (max-height: 720px) {
-  body { padding: 10px 12px; }
-  .profile { padding: 10px 16px 12px; }
-  .brand { font-size: 29px; }
-  .sparkle { font-size: 25px; }
+  body {
+    padding: 10px 12px;
+  }
+  .profile {
+    padding: 10px 16px 12px;
+  }
+  .brand {
+    font-size: 29px;
+  }
+  .sparkle {
+    font-size: 25px;
+  }
   .avatar {
     width: clamp(66px, 14dvh, 100px);
     height: clamp(66px, 14dvh, 100px);
     margin: 6px auto 8px;
     border-width: 4px;
   }
-  .profile h1 { font-size: 24px; }
-  .profile p { font-size: 16px; margin-top: 3px; }
-  .contact-links { padding: 7px 13px; gap: 4px; }
-  .contact-link { min-height: 46px; padding: 7px 11px; }
-  .cta { min-height: 47px; padding: 7px; font-size: 19px; }
-  .footer { font-size: 11px; margin: 0; }
+  .profile h1 {
+    font-size: 24px;
+  }
+  .profile p {
+    font-size: 16px;
+    margin-top: 3px;
+  }
+  .contact-links {
+    padding: 7px 13px;
+    gap: 4px;
+  }
+  .contact-link {
+    min-height: 46px;
+    padding: 7px 11px;
+  }
+  .cta {
+    min-height: 47px;
+    padding: 7px;
+    font-size: 19px;
+  }
+  .footer {
+    font-size: 11px;
+    margin: 0;
+  }
 }
 @media (max-width: 600px) and (max-height: 480px) {
-  .avatar { width: 55px; height: 55px; }
-  .profile { padding-block: 5px; }
-  .contact-links { padding-block: 3px; }
-  .contact-link { min-height: 38px; }
-  .cta { min-height: 38px; }
+  .avatar {
+    width: 55px;
+    height: 55px;
+  }
+  .profile {
+    padding-block: 5px;
+  }
+  .contact-links {
+    padding-block: 3px;
+  }
+  .contact-link {
+    min-height: 38px;
+  }
+  .cta {
+    min-height: 38px;
+  }
+}
+
+/* Ajustements visuels mobile : photo plus grande et contacts regroupés. */
+@media (max-width: 600px) {
+  .contact-links {
+    justify-content: space-evenly;
+    gap: 8px;
+  }
+  .contact-group {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(9px, 1.6dvh, 14px);
+  }
+  .avatar {
+    width: clamp(112px, 19dvh, 155px);
+    height: clamp(112px, 19dvh, 155px);
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 600px) and (max-height: 720px) {
+  .avatar {
+    width: clamp(94px, 17dvh, 130px);
+    height: clamp(94px, 17dvh, 130px);
+    margin: 5px auto 7px;
+  }
+  .contact-links {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 600px) and (max-height: 480px) {
+  .avatar {
+    width: 55px;
+    height: 55px;
+  }
+  .contact-group {
+    gap: 4px;
+  }
 }
