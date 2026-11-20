@@ -45,17 +45,17 @@ img {
 }
 
 h1 {
-  margin: 30px auto;
-  font-size: 2.5em;
+  margin: 15px auto;
+  font-size: 2.2em;
 }
 
 p {
-  margin: 20px auto 0 auto;
+  margin: 15px auto 0 auto;
 }
 
 a {
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   color: black;
 }
 
